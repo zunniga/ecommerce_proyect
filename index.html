@@ -30,38 +30,41 @@
         <div class="container">
             <div class="top__wrapper">
                 <a href="index.html" class="main__logo">
-                    <img src="assets/images/logo/logo.svg" alt="logo__image">
+                    <img src="assets/images/logo/logou.png" alt="logo__image">
                 </a>
                 <div class="search__wrp">
                     <input placeholder="Search for" aria-label="Search">
                     <button><i class="fa-solid fa-search"></i></button>
                 </div>
                 <div class="account__wrap">
-                    <div class="account d-flex align-items-center">
+                    <div class="account d-flex align-items-center" id="playButton">
                         <div class="user__icon">
-                            <a href="#0">
-                                <i class="fa-regular fa-user"></i>
+                            <a href="#0" >
+                                <i class="fa-solid fa-music"></i>
                             </a>
                         </div>
-                        <a href="#0" class="acc__cont">
+                        <a href="#0" class="acc__cont" id="playButton">
                             <span>
-                                My Account
+                                DALE PLAY!
                             </span>
                         </a>
                     </div>
-                    <div class="cart d-flex align-items-center">
-                        <span class="cart__icon">
-                            <i class="fa-regular fa-cart-shopping"></i>
-                        </span>
-                        <a href="#0" class="c__one">
-                            <span>
-                                $0.00
-                            </span>
-                        </a>
-                        <span class="one">
-                            0
-                        </span>
-                    </div>
+                
+                    <!-- Elemento de audio -->
+                    <audio id="audioPlayer" src="assets/audio/avicii_audioo.mp3"></audio>
+                
+                    <!-- Script para reproducir la canción -->
+                    <script>
+                        // Obtener el elemento de audio y el botón
+                        const audioPlayer = document.getElementById('audioPlayer');
+                        const playButton = document.getElementById('playButton');
+                
+                        // Añadir el evento de click al botón
+                        playButton.addEventListener('click', function(event) {
+                            event.preventDefault(); // Evita que el enlace navegue a otra página
+                            audioPlayer.play(); // Reproduce la canción
+                        });
+                    </script>                  
                     <div class="flag__wrap">
                         <div class="flag">
                             <img src="assets/images/flag/us.png" alt="flag">
@@ -95,29 +98,7 @@
                 </div>
                 <ul class="main-menu">
                     <li>
-                        <a href="#0">Home <i class="fa-regular fa-angle-down"></i></a>
-                        <ul class="sub-menu">
-                            <li class="subtwohober">
-                                <a href="index.html">
-                                    Home One
-                                </a>
-                            </li>
-                            <li class="subtwohober">
-                                <a href="index-light.html">
-                                    Home One Light
-                                </a>
-                            </li>
-                            <li class="subtwohober">
-                                <a href="index-2.html">
-                                    Home Two
-                                </a>
-                            </li>
-                            <li class="subtwohober">
-                                <a href="index-2-light.html">
-                                    Home Two Light
-                                </a>
-                            </li>
-                        </ul>
+                        <a href="index.html">Inicio </a>
                     </li>
                     <li>
                         <a href="about.html">About Us</a>
@@ -232,71 +213,51 @@
                         <div class="slide-bg" data-background="assets/images/banner/numero_3.jpg"></div>
                         <div class="container">
                             <div class="banner-two__content">
-                                <h1 data-animation="fadeInUp" data-delay="1.3s">En esta pagina <br>
-                                    fue hecha por un Fanatico de  <span class="primary-color">Avicii</span></h1>
-                                <p class="mt-40" data-animation="fadeInUp" data-delay="1.5s">Sell globally in minutes
-                                    with localized currencies languages, and <br> experie in
-                                    every
-                                    market. only a variety of vaping
-                                    products</p>
+                                <h1 data-animation="fadeInUp" data-delay="1.3s">Revive el Mundo de <br>
+                                    <span class="primary-color">Avicii</span></h1>
+                                <p class="mt-40" data-animation="fadeInUp" data-delay="1.5s">Avicii, el genio sueco detrás de algunos de los éxitos más grandes de la música electrónica, transformó la industria musical con su talento y pasión. Sus inolvidables himnos siguen marcando tendencia y emocionando a sus fanáticos en todo el mundo.</p>
                                 <div class="btn-wrp mt-65">
-                                    <a href="shop.html" class="btn-one" data-animation="fadeInUp"
-                                        data-delay="1.8s"><span>Shop
-                                            Now</span></a>
-                                    <a class="btn-one-light ml-20" href="shop-single.html" data-animation="fadeInUp"
-                                        data-delay="1.9s"><span>View Details</span></a>
+                                    <a href="avicii-music.html" class="btn-one" data-animation="fadeInUp"
+                                        data-delay="1.8s"><span>Explora su Música</span></a>
+                                    <a class="btn-one-light ml-20" href="avicii-biography.html" data-animation="fadeInUp"
+                                        data-delay="1.9s"><span>Leer Más</span></a>
                                 </div>
                             </div>
+                            
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="slide-bg" data-background="assets/images/banner/numero_2.jpg"></div>
                         <div class="container">
                             <div class="banner-two__content">
-                                <h1 data-animation="fadeInUp" data-delay="1.3s">Find everything <br>
-                                    for <span class="primary-color">vaping</span></h1>
-                                <p class="mt-40" data-animation="fadeInUp" data-delay="1.5s">Sell globally in minutes
-                                    with localized currencies languages, and <br> experie in
-                                    every
-                                    market. only a variety of vaping
-                                    products</p>
+                                <h1 data-animation="fadeInUp" data-delay="1.3s">Celebra el Legado de <br>
+                                    <span class="primary-color">Avicii</span></h1>
+                                <p class="mt-40" data-animation="fadeInUp" data-delay="1.5s">Tim Bergling, conocido mundialmente como Avicii, fue un DJ, remezclador y productor musical sueco que revolucionó la escena de la música electrónica. Sus ritmos, melodías y temas inolvidables continúan inspirando a millones en todo el mundo.</p>
                                 <div class="btn-wrp mt-65">
-                                    <a href="shop.html" class="btn-one" data-animation="fadeInUp"
-                                        data-delay="1.8s"><span>Shop
-                                            Now</span></a>
-                                    <a class="btn-one-light ml-20" href="shop-single.html" data-animation="fadeInUp"
-                                        data-delay="1.9s"><span>View
-                                            Details</span></a>
+                                    <a href="avicii-music.html" class="btn-one" data-animation="fadeInUp"
+                                        data-delay="1.8s"><span>Escucha Ahora</span></a>
+                                    <a class="btn-one-light ml-20" href="avicii-biography.html" data-animation="fadeInUp"
+                                        data-delay="1.9s"><span>Ver Detalles</span></a>
                                 </div>
                             </div>
+                            
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="slide-bg" data-background="assets/images/banner/banner_picture.jpg"></div>
                         <div class="container">
                             <div class="banner-two__content">
-                                <h4 data-animation="fadeInUp" data-delay="1s"><img src="assets/images/icon/fire.svg"
-                                        alt="icon"> GET <span class="primary-color">25% OFF</span> NOW</h4>
-                                <h1 data-animation="fadeInUp" data-delay="1.3s">Find everything <br>
-                                    for <span class="primary-color">vaping</span></h1>
-                                <p class="mt-40" data-animation="fadeInUp" data-delay="1.5s">Sell globally in minutes
-                                    with localized currencies languages, and <br> experie in
-                                    every
-                                    market. only a variety of vaping
-                                    products</p>
-                                <div class="banner-two__info mt-30" data-animation="fadeInUp" data-delay="1.7s">
-                                    <span class="mb-10">Starting Price</span>
-                                    <h3>$99.00</h3>
-                                </div>
+                                <h1 data-animation="fadeInUp" data-delay="1.3s">Honra la Memoria de <br>
+                                    <span class="primary-color">Avicii</span></h1>
+                                <p class="mt-40" data-animation="fadeInUp" data-delay="1.5s">Tim Bergling, mejor conocido como Avicii, fue un innovador en la música electrónica. Este talentoso DJ y productor sueco dejó una huella imborrable en el mundo con sus producciones únicas y emotivas, que continúan resonando en los corazones de sus seguidores.</p>
                                 <div class="btn-wrp mt-65">
-                                    <a href="shop.html" class="btn-one" data-animation="fadeInUp"
-                                        data-delay="1.8s"><span>Shop
-                                            Now</span></a>
-                                    <a class="btn-one-light ml-20" href="shop-single.html" data-animation="fadeInUp"
-                                        data-delay="1.9s"><span>View
-                                            Details</span></a>
+                                    <a href="avicii-music.html" class="btn-one" data-animation="fadeInUp"
+                                        data-delay="1.8s"><span>Descubre su Música</span></a>
+                                    <a class="btn-one-light ml-20" href="avicii-biography.html" data-animation="fadeInUp"
+                                        data-delay="1.9s"><span>Más Información</span></a>
                                 </div>
                             </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -314,7 +275,7 @@
             <div class="container">
                 <div class="bor-bottom pb-130">
                     <div class="sub-title text-center mb-65 wow fadeInUp" data-wow-delay=".1s">
-                        <h3><span class="title-icon"></span> our top categories <span class="title-icon"></span>
+                        <h3><span class="title-icon"></span> Albunes Lanzados Oficialmente <span class="title-icon"></span>
                         </h3>
                     </div>
                     <div class="swiper category__slider">
@@ -1335,7 +1296,7 @@
             </div>
             <div class="footer__copy-text pt-50 pb-50">
                 <a href="index.html" class="logo d-block">
-                    <img src="assets/images/logo/logo.svg" alt="logo">
+                    <img src="assets/images/logo/logou.png" alt="logo">
                 </a>
                 <p>&copy; Copyright 2023 <a href="#0" class="primary-hover">odor</a> All Rights Reserved</p>
                 <a href="#0" class="payment d-block image">

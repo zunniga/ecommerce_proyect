@@ -2293,6 +2293,8 @@ input {
   height: 44px;
   display: block;
 }
+
+
 @media screen and (max-width: 500px) {
   .top__header .top__wrapper .main__logo {
     display: none;
@@ -2393,7 +2395,7 @@ input {
   width: 51px;
   height: 50px;
   border-radius: 100px 0 0 100px;
-  background-color: var(--primary-color);
+  background-color:blue;
   text-align: center;
   line-height: 50px;
 }
