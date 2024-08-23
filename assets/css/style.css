@@ -2556,8 +2556,10 @@ input {
   position: absolute;
   top: 114px;
   left: 0;
-  background-color: #191919;
+  background-color: rgba(255, 255, 255, 0.1); /* Un poco de opacidad para ver el blur */
+  backdrop-filter: blur(5px); /* Ajusta el valor de pixeles para más o menos desenfoque */
 }
+
 @media (max-width: 1199px) {
   .header-section {
     top: 100px;

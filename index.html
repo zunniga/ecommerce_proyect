@@ -39,7 +39,7 @@
                 <div class="account__wrap">
                     <div class="account d-flex align-items-center" id="playButton">
                         <div class="user__icon">
-                            <a href="#0" >
+                            <a href="#0">
                                 <i class="fa-solid fa-music"></i>
                             </a>
                         </div>
@@ -49,22 +49,50 @@
                             </span>
                         </a>
                     </div>
-                
+                    
                     <!-- Elemento de audio -->
-                    <audio id="audioPlayer" src="assets/audio/avicii_audioo.mp3"></audio>
-                
-                    <!-- Script para reproducir la canción -->
+                    <audio id="audioPlayer" src="assets/audio/audio_tribute.mp3"></audio>
+                    
+                    <!-- Script para reproducir o pausar la canción y manejar la animación -->
                     <script>
                         // Obtener el elemento de audio y el botón
                         const audioPlayer = document.getElementById('audioPlayer');
                         const playButton = document.getElementById('playButton');
-                
+                    
                         // Añadir el evento de click al botón
                         playButton.addEventListener('click', function(event) {
                             event.preventDefault(); // Evita que el enlace navegue a otra página
-                            audioPlayer.play(); // Reproduce la canción
+                            
+                            // Comprobar si el audio está pausado
+                            if (audioPlayer.paused) {
+                                audioPlayer.play(); // Reproduce la canción
+                                playButton.classList.add('playing'); // Añadir la clase 'playing' para iniciar la animación
+                            } else {
+                                audioPlayer.pause(); // Pausa la canción
+                                playButton.classList.remove('playing'); // Remover la clase 'playing' para detener la animación
+                            }
                         });
-                    </script>                  
+                    </script>
+                    
+                    <!-- Estilos CSS -->
+                    <style>
+                        /* Definir la animación de rotación */
+                        @keyframes spin {
+                            from {
+                                transform: rotate(0deg);
+                            }
+                            to {
+                                transform: rotate(360deg);
+                            }
+                        }
+                    
+                        /* Clase para aplicar la animación */
+                        .playing .user__icon i {
+                            animation: spin 2s linear infinite;
+                        }
+                    </style>
+                    
+                                   
                     <div class="flag__wrap">
                         <div class="flag">
                             <img src="assets/images/flag/us.png" alt="flag">
@@ -210,7 +238,7 @@
             <div class="swiper banner-two__slider">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <div class="slide-bg" data-background="assets/images/banner/numero_3.jpg"></div>
+                        <div class="slide-bg" data-background="assets/images/banner/nova_4.jpg"></div>
                         <div class="container">
                             <div class="banner-two__content">
                                 <h1 data-animation="fadeInUp" data-delay="1.3s">Revive el Mundo de <br>
@@ -227,7 +255,7 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="slide-bg" data-background="assets/images/banner/numero_2.jpg"></div>
+                        <div class="slide-bg" data-background="assets/images/banner/nova_2.jpg"></div>
                         <div class="container">
                             <div class="banner-two__content">
                                 <h1 data-animation="fadeInUp" data-delay="1.3s">Celebra el Legado de <br>
@@ -244,7 +272,7 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="slide-bg" data-background="assets/images/banner/banner_picture.jpg"></div>
+                        <div class="slide-bg" data-background="assets/images/banner/nova_3.jpg"></div>
                         <div class="container">
                             <div class="banner-two__content">
                                 <h1 data-animation="fadeInUp" data-delay="1.3s">Honra la Memoria de <br>
