@@ -144,28 +144,78 @@ CSS TABLE OF CONTENTS
 	});
 	// Product slider area end here ***
 
-	// Gallery slider area start here ***
-	var swiper = new Swiper(".gallery__slider", {
-		spaceBetween: 30,
-		speed: 300,
-		loop: true,
-		centeredSlides: true,
-		autoplay: {
-			delay: 5000,
-			disableOnInteraction: false,
-		},
-		breakpoints: {
-			1300: {
-				slidesPerView: 4,
-			},
-			991: {
-				slidesPerView: 3,
-			},
-			768: {
-				slidesPerView: 2,
-			},
-		},
-	});
+
+
+	// Función para mezclar un array
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
+// Mezclar imágenes en gallery__slider
+const sliderContainer1 = document.querySelector(".gallery__slider .swiper-wrapper");
+const slides1 = Array.from(sliderContainer1.children);
+const shuffledSlides1 = shuffleArray(slides1);
+sliderContainer1.innerHTML = '';
+shuffledSlides1.forEach(slide => sliderContainer1.appendChild(slide));
+
+// Inicializar Swiper para gallery__slider
+var swiper1 = new Swiper(".gallery__slider", {
+    spaceBetween: 24,
+    speed: 1900,
+    loop: true,
+    centeredSlides: true,
+    autoplay: {
+        delay: 900,
+        disableOnInteraction: false,
+    },
+    breakpoints: {
+        1300: {
+            slidesPerView: 4,
+        },
+        991: {
+            slidesPerView: 4,
+        },
+        768: {
+            slidesPerView: 5,
+        },
+    },
+});
+
+// Mezclar imágenes en gallery__slider_2
+const sliderContainer2 = document.querySelector(".gallery__slider_2 .swiper-wrapper");
+const slides2 = Array.from(sliderContainer2.children);
+const shuffledSlides2 = shuffleArray(slides2);
+sliderContainer2.innerHTML = '';
+shuffledSlides2.forEach(slide => sliderContainer2.appendChild(slide));
+
+// Inicializar Swiper para gallery__slider_2
+var swiper2 = new Swiper(".gallery__slider_2", {
+    spaceBetween: 24,
+    speed: 1900,
+    loop: true,
+    centeredSlides: true,
+    autoplay: {
+        delay: 880,
+        disableOnInteraction: false,
+    },
+    breakpoints: {
+        1300: {
+            slidesPerView: 4,
+        },
+        991: {
+            slidesPerView: 4,
+        },
+        768: {
+            slidesPerView: 5,
+        },
+    },
+});
+
+	
 	// Gallery slider area end here ***
 
 	// Category slider area start here ***
