@@ -192,6 +192,8 @@ const shuffledSlides2 = shuffleArray(slides2);
 sliderContainer2.innerHTML = '';
 shuffledSlides2.forEach(slide => sliderContainer2.appendChild(slide));
 
+
+
 // Inicializar Swiper para gallery__slider_2
 var swiper2 = new Swiper(".gallery__slider_2", {
     spaceBetween: 24,
